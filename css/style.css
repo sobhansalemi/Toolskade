@@ -143,6 +143,14 @@ footer img{
     margin: 1.6rem;
 }
 
+footer a{
+    text-decoration: none;
+    font-style: normal;
+    border: none;
+    box-shadow: none;
+    outline: none;
+}
+
 footer i{
     color: white;
     font-size: 1.8rem;
@@ -152,12 +160,20 @@ footer i{
 
 footer i:hover{
     color: #1ebba3;
-
+    text-decoration: none;
+    font-style: normal;
+    border: none;
+    box-shadow: none;
+    outline: none;
 }
 
 .footer-hr{
     width: 70%;
     border-top: 0.2rem solid #666b71;
     margin-top: 3rem;
+}
+
+footer p {
+    margin: 1rem 14rem;
 }
 /* End Footert */
