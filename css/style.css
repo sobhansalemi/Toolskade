@@ -1,0 +1,179 @@
+/* Navbar */
+.navbar-dark .navbar-nav .active>.nav-link,
+ .navbar-dark .navbar-nav .nav-link.active,
+.navbar-dark .navbar-nav .nav-link.show,
+ .navbar-dark .navbar-nav .show>.nav-link {
+    color: #1ebba3 !important;
+}
+/* End Navbar */
+
+/* Home */
+.landing{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+}
+
+.icon{
+    mix-blend-mode: exclusion;
+}
+
+.home-wrap{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.home-inner{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(../images/root/tools1.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+
+.caption{
+    width: 100%;
+    position: absolute;
+    top: 40%;
+    z-index: 1;
+    color: white;
+}
+.caption h1{
+    font-size: 4rem;
+    font-weight: 700;
+    letter-spacing: 0.3rem;
+    text-shadow: 0.1rem 0.1rem 0.8rem #000;
+    padding: 1rem;
+}
+
+.caption h3{
+    font-size: 2rem;
+    text-shadow: 0.1rem 0.1rem 0.5rem #000;
+    padding-bottom: 1.6rem;
+}
+
+.caption .btn-statr{
+    font-size: 1.2rem;
+    border-width: 0.1rem;
+    border-radius: 0;
+    padding: 0.5rem 1rem;
+}
+/* End Home */
+
+/* about us */
+.area{
+    margin: 0 auto;
+    padding: 4rem 2rem 1rem; 
+}
+
+.area h2{
+    font-size: 2.4rem;
+}
+
+.btn-secondray{
+    border-width: 0.1rem;
+    font-size: 1.2rem;
+    padding: 0.6rem 1.2rem;
+    margin: 1rem;
+    color: #fff;
+    background-color: #1ebba3;
+    border-color: #1ebba3;
+}
+
+.btn-secondray:hover{
+    background-color: #169c88;
+    border-color: #169c88;
+    color: #fff;
+}
+/* End about us */
+
+/* Service */
+.jumbotron{
+    margin-bottom: 0;
+    padding: 2rem 0 3.5rem;
+    border-radius: 0;
+}
+
+h2.title{
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+.underline{
+    width: 20rem;
+    height: 0.2rem;
+    background-color: #1ebba3;
+    margin: 1rem auto 2rem;
+}
+
+.service i{
+    color: #1ebba3;
+}
+
+.service h3{
+    font-size: 1.4rem;
+    padding-bottom: 0.4rem;
+    font-weight: bold;
+}
+
+.service p{
+    font-size: 1.1rem;
+}
+/* End Service */
+
+
+/* Footert */
+footer{
+    background-color: #343a40;
+    color: white;
+    padding: 2rem 0;
+}
+
+footer img{
+    height: 6rem;
+    margin: 1.6rem;
+}
+
+footer a{
+    text-decoration: none;
+    font-style: normal;
+    border: none;
+    box-shadow: none;
+    outline: none;
+}
+
+footer i{
+    color: white;
+    font-size: 1.8rem;
+    margin: 1.2rem 0.5rem;
+}
+
+
+footer i:hover{
+    color: #1ebba3;
+    text-decoration: none;
+    font-style: normal;
+    border: none;
+    box-shadow: none;
+    outline: none;
+}
+
+.footer-hr{
+    width: 70%;
+    border-top: 0.2rem solid #666b71;
+    margin-top: 3rem;
+}
+
+footer p {
+    margin: 1rem 14rem;
+}
+/* End Footert */
