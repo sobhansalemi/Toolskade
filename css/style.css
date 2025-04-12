@@ -177,3 +177,18 @@ footer p {
     margin: 1rem 14rem;
 }
 /* End Footert */
+
+.container{
+    width: 100%;
+    height: 1000px;
+}
+
+.col {
+    
+    visibility: visible !important;
+}
+
+.ht {
+
+    visibility: visible !important;
+}
