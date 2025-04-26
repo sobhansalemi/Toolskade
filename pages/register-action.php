@@ -4,8 +4,8 @@ $username=$_POST["username"];
 $email=$_POST["email"];
 $password=$_POST["password"];
 
-$c=mysqli_connect("localhost","root","","user");
-$result=mysqli_query($c,"INSERT INTO `register` (`username`, `email`, `password`) 
+$c=mysqli_connect("localhost","root","","Myshop");
+$result=mysqli_query($c,"INSERT INTO `user` (`username`, `email`, `password`) 
 VALUES ('$username', '$email', '$password');");
 mysqli_close($c);
 

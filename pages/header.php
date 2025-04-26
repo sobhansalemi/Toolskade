@@ -16,6 +16,7 @@ session_start();
 
     <!-- My css -->
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/style2.css">
     <!-- My css -->
 
     
@@ -38,20 +39,20 @@ session_start();
                         <a class="nav-link" href="../index.php"> خانه <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link " href="#about">درباره ما</a>
+                        <a class="nav-link " href="../index.php">درباره ما</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link " href="#services">خدمات ما</a>
+                        <a class="nav-link " href="../index.php">خدمات ما</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="../pages/shopping.html">سبد خرید</a>
+                        <a class="nav-link" href="../pages/shopping.php">محصولات</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link " href="#footer">پا صفحه</a>
+                        <a class="nav-link " href="../index.php">پا صفحه</a>
                     </li>
 
                     <?php if(isset($_SESSION["admin"]) && $_SESSION["admin"]==true){ ?>
-                    <li class="nav-item"><a class="nav-link" href="news.php">مدیریت</a></li>
+                    <li class="nav-item"><a class="nav-link" href="product.php">مدیریت</a></li>
                      <?php }else{
                      } ?>
 

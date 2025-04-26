@@ -44,7 +44,7 @@ session_start();
                         <a class="nav-link " href="#services">خدمات ما</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="pages/shopping.html">سبد خرید</a>
+                        <a class="nav-link" href="pages/shopping.php">محصولات</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link " href="#footer">پا صفحه</a>
@@ -52,7 +52,7 @@ session_start();
 
                     <?php if(isset($_SESSION["admin"]) && $_SESSION["admin"]==true){ ?>
                     <li class="nav-item">
-                        <a class="nav-link" href="pages/news.php">مدیریت</a>
+                        <a class="nav-link" href="pages/product.php">مدیریت</a>
                     </li>
                      <?php }else{
                      } ?>

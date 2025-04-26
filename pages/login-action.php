@@ -5,8 +5,8 @@ session_start();
 $username=$_POST['username'];
 $password=$_POST["password"];
 
-$c=mysqli_connect("localhost","root","","user");
-$m=mysqli_query($c,"SELECT * FROM `register` WHERE `username`='$username' and `password`='$password'");
+$c=mysqli_connect("localhost","root","","Myshop");
+$m=mysqli_query($c,"SELECT * FROM `user` WHERE `username`='$username' and `password`='$password'");
 mysqli_close($c);
 
 $r=mysqli_fetch_array($m);
