@@ -8,6 +8,22 @@
 /* End Navbar */
 
 /* Home */
+body,html{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+    color: #333;
+}
+
+
+
+.navbar{
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%;
+}
+
 .landing{
     position: relative;
     top: 0;
@@ -30,23 +46,32 @@
 }
 
 .home-inner{
-    position: fixed;
+    position: relative;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    min-height: 100vh;
     background: url(../images/root/tools1.jpg);
     background-size: cover;
     background-position: center center;
+    background-attachment: fixed;
+    z-index: -1;
 }
 
 .caption{
     width: 100%;
+    max-width: 90%;
     position: absolute;
     top: 40%;
+    left: 50%;
+    transform: translateX(-50%);
     z-index: 1;
     color: white;
+    text-align: center;
+    padding: 0 15px;
 }
+
+
 .caption h1{
     font-size: 4rem;
     font-weight: 700;
@@ -72,11 +97,15 @@
 /* about us */
 .area{
     margin: 0 auto;
-    padding: 4rem 2rem 1rem; 
+    padding: 5rem 2rem 1rem; 
+    background-color: #343434;
+    color: #ccc;
+    height: 300px;
 }
 
 .area h2{
     font-size: 2.4rem;
+    color: #ccc;
 }
 
 .btn-secondray{
@@ -94,9 +123,52 @@
     border-color: #169c88;
     color: #fff;
 }
+
+.section-title {
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: #0f172a;
+}
+  
+.custom-btn {
+    background-color: #1ebba3;
+    border: none;
+    padding: 0.7rem 1.5rem;
+    border-radius: 10px;
+    font-size: 1rem;
+    color: #fff;
+}
+  
+.custom-btn:hover {
+    background-color: #169c88;
+    transition: 0.3s;
+}
 /* End about us */
 
 /* Service */
+
+#services{
+    margin: 30px;
+}
+  
+.service-card {
+    background-color: #fff;
+    border: 1px solid #e5e7eb;
+    transition: all 0.3s ease-in-out;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+}
+  
+.underline {
+    width: 80px;
+    height: 4px;
+    background-color: #1ebba3;
+    border-radius: 2px;
+}
+
 .jumbotron{
     margin-bottom: 0;
     padding: 2rem 0 3.5rem;
@@ -108,12 +180,12 @@ h2.title{
     font-weight: 800;
 }
 
-.underline{
+/* .underline{
     width: 20rem;
     height: 0.2rem;
     background-color: #1ebba3;
     margin: 1rem auto 2rem;
-}
+} */
 
 .service i{
     color: #1ebba3;
@@ -132,55 +204,42 @@ h2.title{
 
 
 /* Footert */
-footer{
-    background-color: #343a40;
-    color: white;
-    padding: 2rem 0;
+
+.site-footer {
+    background-color: #222;
+    color: #ccc;    
 }
 
-footer img{
-    height: 6rem;
-    margin: 1.6rem;
+.footer-logo {
+    height: 70px;
 }
 
-footer a{
-    text-decoration: none;
-    font-style: normal;
-    border: none;
-    box-shadow: none;
-    outline: none;
+.footer-hr {
+    border-top: 1px solid #444;
+    width: 80%;
+    margin: 2rem auto;
 }
 
-footer i{
-    color: white;
-    font-size: 1.8rem;
-    margin: 1.2rem 0.5rem;
-}
-
-
-footer i:hover{
+.site-footer a {
     color: #1ebba3;
-    text-decoration: none;
-    font-style: normal;
-    border: none;
-    box-shadow: none;
-    outline: none;
+    margin: 0 0.5rem;
+    font-size: 1.5rem;
+    transition: 0.3s;
 }
 
-.footer-hr{
-    width: 70%;
-    border-top: 0.2rem solid #666b71;
-    margin-top: 3rem;
+.site-footer a:hover {
+    color: #fff;
 }
 
-footer p {
-    margin: 1rem 14rem;
+.social-icons {
+    margin-top: 1rem;
 }
+
 /* End Footert */
 
 .container{
     width: 100%;
-    height: 1000px;
+    height:auto !important;
 }
 
 .col {
@@ -191,4 +250,19 @@ footer p {
 .ht {
 
     visibility: visible !important;
+}
+.row-card{
+    background-color: bisque;
+    border-radius: 10px;
+}
+.card-image{
+    width: 500px;
+    height: 500px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+}
+
+.butt{
+    padding: 10px;
 }

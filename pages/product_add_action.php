@@ -12,14 +12,14 @@ if (isset($_FILES["image"]) && $_FILES["image"]["error"] == 0) {
     $extension = pathinfo($_FILES["image"]["name"], PATHINFO_EXTENSION);
 
     // بررسی نوع فایل
-    if ($extension != "jpg") {
+    if ($extension != "png") {
         $flagsaveok = false;
-        // $messege = "فقط فایل با پسوند jpg مجاز است.";
-        echo "<div style='margin-top: 80px; font-size:50px; color:red;'>فقط فایل با پسوند jpg مجاز است.</div>";
+        // $messege = "فقط فایل با پسوند jpg,png مجاز است.";
+        echo "<div style='margin-top: 80px; font-size:50px; color:red;'>فقط فایل با پسوند png مجاز است.</div>";
     } else {
         // ایجاد نام یکتا برای فایل
         $imageName = uniqid() . "." . $extension;
-        $imageurl = "../images/" . $imageName;
+        $imageurl = "../images/product/" . $imageName;
 
         // ایجاد پوشه در صورت عدم وجود
         if (!is_dir("images")) {

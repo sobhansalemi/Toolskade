@@ -39,7 +39,7 @@ session_start();
                         <a class="nav-link" href="../index.php"> خانه <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link " href="../index.php">درباره ما</a>
+                        <a class="nav-link " href="about.php">درباره ما</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link " href="../index.php">خدمات ما</a>
@@ -47,9 +47,10 @@ session_start();
                     <li class="nav-item">
                         <a class="nav-link" href="../pages/shopping.php">محصولات</a>
                     </li>
+                    <?php if(isset($_SESSION["login"])){ ?>
                     <li class="nav-item">
-                        <a class="nav-link " href="../index.php">پا صفحه</a>
-                    </li>
+                        <a class="nav-link " href="cart.php">سبد خرید</a>
+                    </li><?php }?>
 
                     <?php if(isset($_SESSION["admin"]) && $_SESSION["admin"]==true){ ?>
                     <li class="nav-item"><a class="nav-link" href="product.php">مدیریت</a></li>

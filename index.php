@@ -4,6 +4,9 @@ session_start();
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta name="description" content="فروش ابزار صنعتی با بهترین قیمت در فروشگاه تولزکده">
+    <meta name="keywords" content="ابزار صنعتی, خرید ابزار, فروشگاه ابزار">
+    <meta name="author" content="Toolskade">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ابزار کده</title>
@@ -12,13 +15,10 @@ session_start();
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/bootstrap-rtl.min.css">
     <link href="https://use.fontawesome.com/releases/v5.0.4/css/all.css" rel="stylesheet">
-    <!-- Bootstrap 5 css -->
 
     <!-- My css -->
     <link rel="stylesheet" href="css/style.css">
-    <!-- My css -->
 
-    
 </head>
 <body class="rtl">
        <!--Home--> 
@@ -46,10 +46,11 @@ session_start();
                     <li class="nav-item">
                         <a class="nav-link" href="pages/shopping.php">محصولات</a>
                     </li>
+                    <?php if(isset($_SESSION["login"])){ ?>
                     <li class="nav-item">
-                        <a class="nav-link " href="#footer">پا صفحه</a>
-                    </li>
-
+                        <a class="nav-link " href="pages/cart.php">سبد خرید</a>
+                    </li><?php }?>
+                    
                     <?php if(isset($_SESSION["admin"]) && $_SESSION["admin"]==true){ ?>
                     <li class="nav-item">
                         <a class="nav-link" href="pages/product.php">مدیریت</a>
@@ -89,77 +90,68 @@ session_start();
        <!-- about us -->
         <div class="bg-white" id="about">
             <div class="col12 text-center area">
-                <h2>سایت ابزار فروشی امیر - سایت فروشگاهی از سبحان سالمی</h2>
-                <a href="#" class="btn btn-secondray">درباره ما بیشتر بدانید</a>
+                <h2 class="section-title">سایت ابزار فروشی امیر</h2>
+                <p class="section-subtitle"> سایت فروشگاهی از سبحان سالمی</p>
+                <a href="pages/about.php" class="btn btn-primary custom-btn">درباره ما بیشتر بدانید</a>
             </div>
         </div>
        <!-- End about us -->
 
        <!-- Services -->
-            <div class="services" id="services">
-                <div class="jumbotron">
-                    <div class="area text-center">
-                        <div class="col-12 text-center">
-                            <h2 class="title">خدمات ابزار کده</h2>
-                            <div class="underline"></div>
-                        </div>
-                        <div class="row text-center">
-                            <div class="col-6">
-                                <div class="service">
-                                    <i class="fa fa-wrench fa-3x"></i>
-                                    <h3>تعمیرات</h3>
-                                    <p>یکی از مهمتری خدمات ما در ابزار کده تعمیرات ابزار آلات خراب شده یا غیر قابل استفاده ی شما است</p>
-                                </div>
-                            </div>
-                            <div class="col-6">
-                                <div class="service">
-                                    <i class="fa fa-check-circle fa-3x"></i>
-                                    <h3>گارانتی بلند مدت</h3>
-                                    <p>یکی دیگر از خدمات ما ارائه دادن گارانتی طولانی مدت محصولات و ابزار آلات است</p>
-                                </div>
-                            </div>
-                            </div>
-                        </div>
-                    </div>
+
+        <section class="services-section py-5" id="services">
+        <div class="container">
+            <h2 class="section-title text-center">خدمات ابزارکده</h2>
+            <div class="underline mx-auto mb-4"></div>
+            <div class="row text-center">
+            <div class="col-md-6 mb-4">
+                <div class="service-card p-4 shadow-sm rounded">
+                <i class="fa fa-wrench fa-3x mb-3 text-primary"></i>
+                <h4>تعمیرات</h4>
+                <p>تعمیرات ابزار آلات خراب یا فرسوده شما توسط تیم مجرب ابزارکده.</p>
                 </div>
             </div>
+            <div class="col-md-6 mb-4">
+                <div class="service-card p-4 shadow-sm rounded">
+                <i class="fa fa-check-circle fa-3x mb-3 text-success"></i>
+                <h4>گارانتی بلند مدت</h4>
+                <p>ارائه گارانتی طولانی‌مدت محصولات برای آسودگی خاطر مشتریان.</p>
+                </div>
+            </div>
+            </div>
+        </div>
+        </section>
        <!-- End Services -->
 
        <!-- Footer -->
-        <footer id="footer">
-            <div class="row justify-content-center">
-                <div class="col-md5 text-center">
-                    <img src="images/logo/toolskade3.png" alt="لوگو">
-                    <p>
-                        مغازه ابزار فروشی امیر متشکل از دو مغازه رنگ فروشی و ابزار فروشی بیش از 20 سال است که در شهر گلدشت در حال خدمات رسانی به مردم است مغازه ابزار فروشی امیر در شهر نجف آباد گلدشت خیابان اصلی نبش مسجد مهدیه قرار دارد و از ساعات 6 تا 2 ظهر و 4 تا 9 شب در خدمت شما است
-                    </p>
-                    <p>
-                        تلفن پشتیبانی : 09139309085
-                        <br>
-                        ایمیل پشتیبانی : sobhansalemi12@Gmail.com
-                        <br> 
-                        <a href="#">
-                            <i class="fab fa-twitter-square">
-
-                            </i>
-                            <i class="fab fa-instagram">
-
-                            </i>
-                            <i class="fab fa-facebook">
-
-                            </i>
-                            <i class="fab fa-youtube">
-
-                            </i>
-                        </a>
-
-                        <hr class="footer-hr">
-                        <p>
-                            استفاده از مطالب سایت تنها با درج لینک مستقیم به آن مطلب مجاز است
-                        </p>
-                    </p>
+            <footer class="site-footer text-center text-white" id="footer">
+        <div class="container py-5">
+            <div class="row">
+            <div class="col-md-4 mb-4">
+                <img src="images/logo/toolskade3.png" alt="لوگو ابزارکده" class="footer-logo mb-3">
+                <p class="text-light">
+                ابزار فروشی امیر شامل ابزار و رنگ، با بیش از 20 سال سابقه در شهر نجف‌آباد، گلدشت.
+                </p>
+            </div>
+            <div class="col-md-4 mb-4">
+                <h5 class="text-white">اطلاعات تماس</h5>
+                <p class="mb-1">تلفن: 09139309085</p>
+                <p class="mb-1">ایمیل: sobhansalemi12@gmail.com</p>
+                <p class="mb-1">مکان: نبش مسجد مهدیه، گلدشت</p>
+            </div>
+            <div class="col-md-4 mb-4">
+                <h5 class="text-white">دنبال کنید</h5>
+                <div class="social-icons">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-telegram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
                 </div>
             </div>
+            </div>
+            <hr class="footer-hr">
+            <p class="mt-3 small">© 2025 تمامی حقوق محفوظ است. استفاده با ذکر منبع مجاز است.</p>
+        </div>
         </footer>
        <!--  End Footer -->
 

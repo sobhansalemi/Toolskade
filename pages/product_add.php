@@ -8,6 +8,3 @@ include("header.php");
             <input class="col-12 col-md m-2" type="text" name="price" placeholder="قیمت محصول">
             <input class="col-12 col-md m-2" type="submit" value="ذخیره">
         </form>
-<?php
-include("footer.html");
-?>
