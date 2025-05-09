@@ -1,8 +1,8 @@
 <?php
 $host = 'localhost';
-$username = 'root';
-$password = '';
-$database = 'myshop';
+$username = 'toolsk_sobhan';
+$password = '123456';
+$database = 'toolsk_myshop';
 
 $link = mysqli_connect($host, $username, $password, $database);
 

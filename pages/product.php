@@ -19,7 +19,7 @@ if(isset($_SESSION["admin"]) && $_SESSION["admin"]==true)
 </div>
 
 <?php 
-$link=mysqli_connect("localhost","root","","Myshop");
+include("sql.php");
 $result=mysqli_query($link,"SELECT * FROM `product`");
 mysqli_close($link);
 

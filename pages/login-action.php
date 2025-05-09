@@ -5,14 +5,14 @@ session_start();
 $username=$_POST['username'];
 $password=$_POST["password"];
 
-$c=mysqli_connect("localhost","root","","Myshop");
-$m=mysqli_query($c,"SELECT * FROM `user` WHERE `username`='$username' and `password`='$password'");
-mysqli_close($c);
+include("sql.php");
+$result=mysqli_query($link,"SELECT * FROM `user` WHERE `username`='$username' and `password`='$password'");
+mysqli_close($link);
 
-$r=mysqli_fetch_array($m);
-if($r){
+$row=mysqli_fetch_array($result);
+if($row){
     $_SESSION["login"]=true;
-    $_SESSION["admin"]=$r["admin"];
+    $_SESSION["admin"]=$row["admin"];
     ?>
     <script>
         location.replace("../index.php");

@@ -43,7 +43,7 @@ if (isset($_FILES["image"]) && $_FILES["image"]["error"] == 0) {
 
 // اگر همه چیز درست بود، ذخیره در پایگاه داده
 if ($flagsaveok) {
-    $link = mysqli_connect("localhost", "root", "", "Myshop");
+    include("sql.php");
 
     if (!$link) {
         die("خطا در اتصال به پایگاه داده: " . mysqli_connect_error());

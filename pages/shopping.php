@@ -1,17 +1,17 @@
 <?php
 include("header.php");
 
-// اتصال به دیتابیس
-$link = mysqli_connect("localhost", "root", "", "myshop");
+
+include("sql.php");
 if (!$link) {
     die("خطا در اتصال به پایگاه داده: " . mysqli_connect_error());
 }
 
-// واکشی محصولات
+
 $query = "SELECT * FROM product";
 $result = mysqli_query($link, $query);
 
-// بستن اتصال بعد از واکشی
+
 mysqli_close($link);
 ?>
 

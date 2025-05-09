@@ -9,7 +9,7 @@ $text=$_POST["text"];
 $imageurl="images/".$image;
 move_uploaded_file($_FILES["image"]["tmp_name"],$imageurl);
 
-$link=mysqli_connect("localhost","root","","Myshop");
+include("sql.php");
 $result=mysqli_query($link,"UPDATE `product` SET `title`='$title',`text`='$text',`imageurl`='$imageurl',`price`='$price' WHERE `id`=$id");
 mysqli_close($link);
 

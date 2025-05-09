@@ -4,10 +4,10 @@ $username=$_POST["username"];
 $email=$_POST["email"];
 $password=$_POST["password"];
 
-$c=mysqli_connect("localhost","root","","Myshop");
-$result=mysqli_query($c,"INSERT INTO `user` (`username`, `email`, `password`) 
+include("sql.php");
+$result=mysqli_query($link,"INSERT INTO `user` (`username`, `email`, `password`) 
 VALUES ('$username', '$email', '$password');");
-mysqli_close($c);
+mysqli_close($link);
 
 
 if($result===true)
